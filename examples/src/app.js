@@ -62,13 +62,13 @@ class App extends React.Component {
       const width = this.state.width;
       return (
         <div className="App">
-          <ExampleBasic title={'Basic Row Layout'} photos={this.state.photos.slice(0, 20)} />
-          <ExampleBasic title={'Basic Column Layout'} direction="column" photos={this.state.photos.slice(40, 60)} />
+          {/* <ExampleBasic title={'Basic Row Layout'} photos={this.state.photos.slice(0, 20)} />
+          <ExampleBasic title={'Basic Column Layout'} direction="column" photos={this.state.photos.slice(40, 60)} /> */}
           <ExampleWithLightbox photos={this.state.photos.slice(60, 75)} />
-          <ExampleCustomComponentSelection photos={this.state.photos.slice(75, 90)} />
+          {/* <ExampleCustomComponentSelection photos={this.state.photos.slice(75, 90)} />
           <ExampleSortable photos={this.state.photos.slice(90, 100)} />
           <ExampleDynamicColumns title={'Custom Dynamic Columns'} photos={this.state.photos.slice(100, 120)} />
-          <ExampleDynamicLoading photos={this.state.photos} />
+          <ExampleDynamicLoading photos={this.state.photos} /> */}
         </div>
       );
     } else {
