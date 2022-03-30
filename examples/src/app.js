@@ -20,12 +20,12 @@ class App extends React.Component {
   loadPhotos() {
     const urlParams = {
       api_key: '455b5e2fa6b951f9b9ab58a86d5e1f8a',
-      photoset_id: '72157708141247864',
+       photoset_id: '72157708141247864',
+      // photoset_id: '72157714286467813',
       user_id: '146659101@N08',
       format: 'json',
-      tag: 'office',
-      per_page: '120',
-      extras: 'url_m,url_c,url_l,url_h,url_o',
+      per_page: '200',
+      extras: 'url_m,url_c,url_l,url_h,url_o,tags',
     };
 
    let url = 'https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos';
@@ -66,7 +66,8 @@ class App extends React.Component {
         <div className="App">
           {/* <ExampleBasic title={'Basic Row Layout'} photos={this.state.photos.slice(0, 20)} />
           <ExampleBasic title={'Basic Column Layout'} direction="column" photos={this.state.photos.slice(40, 60)} /> */}
-          <ExampleWithLightbox photos={this.state.photos.slice(60, 75)} />
+          <ExampleWithLightbox photos={this.state.photos.slice(99, 155)} />
+          {/* <Gallery photos={photos} onClick={openLightbox} /> */}
           {/* <ExampleCustomComponentSelection photos={this.state.photos.slice(75, 90)} />
           <ExampleSortable photos={this.state.photos.slice(90, 100)} />
           
@@ -86,6 +87,5 @@ class App extends React.Component {
   }
 }
  
-
 
 ReactDOM.render(<App />, document.getElementById('app'));
