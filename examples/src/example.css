@@ -150,7 +150,9 @@ iframe{
 }
 header {
   width: 100%;
-  padding: 40px 0;
+  max-width: 1600px;
+  margin: auto;
+  padding: 40px 0 10px;
 }
 .header-inner {
   width: 90%;
@@ -162,11 +164,12 @@ header {
 }
 .header-inner .item-btn {
   text-align: center;
-  width: 200px;
+  width: 100%;
+  max-width: 250px;
   margin-right: 25px;
   margin-top: 25px;
     border: 1px solid #333;
-    background-color: #bce1bc;
+    background-color: #c3f7c8;
     border-radius: 5px;
     color: #111111;
 }
@@ -176,10 +179,29 @@ header {
     padding: 10px 15px;
 }
 .item-btn:hover .nav-btn {
-  color: #111111;
-  background-color: #54d854;
+  color: #ffffff;
+  background-color: #54c45e;
 }
-
+.top-header {
+  display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    padding: 20px 10px;
+}
+.top-header h1 {
+  margin: 0;
+}
+.top-header a {
+  display: inline-block;
+  padding: 20px 30px;
+    background-color: #fff3d9;
+    color: #111111;
+    border-radius: 20px;
+    border: 1px solid #111111;
+    outline: none;
+}
 @media only screen and (max-width: 1190px) {
   .header-inner {
     width: 90%;
@@ -188,7 +210,11 @@ header {
     align-items: center;
   }
   .header-inner .item-btn {
-    margin-right: 0;
+    margin-right: 10px;
+    margin-left: 10px;
     margin-top: 15px;
+  }
+  h1 {
+    font-size: 15px;
   }
 }

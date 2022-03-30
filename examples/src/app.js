@@ -23,11 +23,13 @@ class App extends React.Component {
       photoset_id: '72157708141247864',
       user_id: '146659101@N08',
       format: 'json',
+      tag: 'office',
       per_page: '120',
       extras: 'url_m,url_c,url_l,url_h,url_o',
     };
 
-    let url = 'https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos';
+   let url = 'https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos';
+   
     url = Object.keys(urlParams).reduce((acc, item) => {
       return acc + '&' + item + '=' + urlParams[item];
     }, url);
@@ -67,8 +69,9 @@ class App extends React.Component {
           <ExampleWithLightbox photos={this.state.photos.slice(60, 75)} />
           {/* <ExampleCustomComponentSelection photos={this.state.photos.slice(75, 90)} />
           <ExampleSortable photos={this.state.photos.slice(90, 100)} />
-          <ExampleDynamicColumns title={'Custom Dynamic Columns'} photos={this.state.photos.slice(100, 120)} />
+          
           <ExampleDynamicLoading photos={this.state.photos} /> */}
+          {/* <ExampleDynamicColumns title={'Custom Dynamic Columns'} photos={this.state.photos.slice(100, 120)} /> */}
         </div>
       );
     } else {
@@ -82,4 +85,7 @@ class App extends React.Component {
     }
   }
 }
+ 
+
+
 ReactDOM.render(<App />, document.getElementById('app'));

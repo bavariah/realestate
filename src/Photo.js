@@ -25,6 +25,7 @@ const Photo = ({ index, onClick, photo, margin, direction, top, left, key }) => 
   );
 };
 
+
 export const photoPropType = PropTypes.shape({
   key: PropTypes.string,
   src: PropTypes.string.isRequired,
@@ -54,4 +55,5 @@ Photo.propTypes = {
   direction: PropTypes.string,
 };
 
-export default Photo;
+
+ export default Photo;
